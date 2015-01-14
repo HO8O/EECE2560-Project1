@@ -16,23 +16,25 @@ Response::~Response()
 
 void Response::SetCorrect(int numOfCorect)
 {
+	correct = numOfCorect;
 }
 
 
 void Response::SetIncorrect(int numOfIncorrect)
 {
+	incorrect = numOfIncorrect;
 }
 
 
 int Response::GetCorrect()const
 {
-	return 0;
+	return correct;
 }
 
 
 int Response::GetIncorrect()const
 {
-	return 0;
+	return incorrect;
 }
 
 

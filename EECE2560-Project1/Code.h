@@ -9,5 +9,6 @@ private:
 public:
 	int CheckIncorrect(const Code &guess)const;
 	int CheckCorrect(const Code &guess)const;
+	int GetSecretCodeAtIndex(int index)const;
 };
 
