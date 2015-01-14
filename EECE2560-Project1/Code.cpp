@@ -12,13 +12,13 @@ Code::~Code()
 }
 
 
-int Code::CheckIncorrect(Code guess)
+int Code::CheckIncorrect(const Code &guess)const
 {
 	return 0;
 }
 
 
-int Code::CheckCorrect(Code guess)
+int Code::CheckCorrect(const Code &guess)const
 {
 	return 0;
 }

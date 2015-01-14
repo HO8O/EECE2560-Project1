@@ -8,8 +8,8 @@ private:
 	Code mySecretCode;
 public:
 	void PrintSecretCode();
-	Code humanGuess();
-	Response GetResponse(Code secret, Code guess);
+	Code HumanGuess()const;
+	Response GetResponse(const Code &secret, const Code &guess)const;
 	void PlayGame();
 };
 

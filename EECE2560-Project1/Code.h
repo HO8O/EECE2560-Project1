@@ -7,7 +7,7 @@ public:
 private:
 	int secretCode[4];
 public:
-	int CheckIncorrect(Code guess);
-	int CheckCorrect(Code guess);
+	int CheckIncorrect(const Code &guess)const;
+	int CheckCorrect(const Code &guess)const;
 };
 

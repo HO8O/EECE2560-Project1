@@ -10,10 +10,10 @@ private:
 public:
 	void SetCorrect(int numOfCorect);
 	void SetIncorrect(int numOfIncorrect);
-	int GetCorrect();
-	int GetIncorrect();
-	bool IsCorrect();
+	int GetCorrect()const;
+	int GetIncorrect()const;
+	bool IsCorrect()const;
 	void PrintStoredCode();
-	bool CompareResponse(Response response);
+	bool CompareResponse(const Response &response)const;
 };
 

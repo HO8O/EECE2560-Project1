@@ -19,13 +19,13 @@ void Mastermind::PrintSecretCode()
 }
 
 
-Code Mastermind::humanGuess()
+Code Mastermind::HumanGuess()const
 {
 	return Code();
 }
 
 
-Response Mastermind::GetResponse(Code secret, Code guess)
+Response Mastermind::GetResponse(const Code &secret, const Code &guess)const
 {
 	return Response();
 }

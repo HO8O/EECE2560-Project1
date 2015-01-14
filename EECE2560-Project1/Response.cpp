@@ -24,19 +24,19 @@ void Response::SetIncorrect(int numOfIncorrect)
 }
 
 
-int Response::GetCorrect()
+int Response::GetCorrect()const
 {
 	return 0;
 }
 
 
-int Response::GetIncorrect()
+int Response::GetIncorrect()const
 {
 	return 0;
 }
 
 
-bool Response::IsCorrect()
+bool Response::IsCorrect()const
 {
 	return false;
 }
@@ -47,7 +47,7 @@ void Response::PrintStoredCode()
 }
 
 
-bool Response::CompareResponse(Response response)
+bool Response::CompareResponse(const Response &response)const
 {
 	return false;
 }
