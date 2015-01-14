@@ -25,7 +25,7 @@ Code Mastermind::humanGuess()
 }
 
 
-Response Mastermind::GetResponse()
+Response Mastermind::GetResponse(Code secret, Code guess)
 {
 	return Response();
 }

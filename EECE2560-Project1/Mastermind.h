@@ -9,7 +9,7 @@ private:
 public:
 	void PrintSecretCode();
 	Code humanGuess();
-	Response GetResponse();
+	Response GetResponse(Code secret, Code guess);
 	void PlayGame();
 };
 
