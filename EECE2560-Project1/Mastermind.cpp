@@ -8,7 +8,6 @@
 
 Mastermind::Mastermind()
 {
-	mySecretCode = Code();
 	currentResponse = Response();
 }
 
@@ -44,6 +43,8 @@ Code Mastermind::HumanGuess()const
 		else
 		{
 			std::cout << "\nError: Value must be in rang [0,5]!!!";
+			std::cin.clear();
+			std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 		}
 	}
 	guess.SetSecretCode(codeGuess);
