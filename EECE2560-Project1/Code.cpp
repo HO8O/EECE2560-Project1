@@ -32,9 +32,27 @@ int Code::GetSecretCodeAtIndex(int index)const
 	}
 }
 
-int Code::CheckIncorrect(const Code &guess)const
+void Code::SetSecretCodeAtIndex(int index, int value)
 {
-	return 0;
+	secretCode[index] = value;
+}
+
+int Code::CheckIncorrect(Code &guess)
+{
+	int NumIncorrect = 0;
+	for (int i = 0; i <= 3; i++)
+	{
+		for (int j = 0; i <= 3; j++)
+		{
+			if (secretCode[i] == guess.GetSecretCodeAtIndex(j))
+			{
+				NumIncorrect++;
+				guess.SetSecretCodeAtIndex(j, -1);
+			}
+		}
+	}
+	//Maybe deinit guess here?
+	return NumIncorrect;
 }
 
 

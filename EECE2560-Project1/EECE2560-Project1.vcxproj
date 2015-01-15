@@ -79,11 +79,17 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Code.h" />
+    <ClInclude Include="Mastermind.h" />
+    <ClInclude Include="Response.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Code.cpp" />
     <ClCompile Include="EECE2560-Project1.cpp" />
+    <ClCompile Include="Mastermind.cpp" />
+    <ClCompile Include="Response.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
