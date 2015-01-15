@@ -1,4 +1,7 @@
 #pragma once
+#include "Code.h"
+#include "Response.h"
+
 class Mastermind
 {
 public:

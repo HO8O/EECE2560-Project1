@@ -5,6 +5,7 @@
 
 Code::Code()
 {
+	secretCode.resize(4);
 	for (int i = 0; i <= 3; i++)
 	{
 		secretCode[i] = ((std::rand() % 6) - 1);
@@ -16,38 +17,33 @@ Code::~Code()
 {
 	for (int i = 0; i <= 3; i++)
 	{
-		secretCode[i] = 0;
+		secretCode[i] = INVALID_CODE;
 	}
 }
 
-int Code::GetSecretCodeAtIndex(int index)const
+std::vector<int> Code::GetSecretCode()const
 {
-	if (index <= 3)
-	{
-		return secretCode[index];
-	}
-	else
-	{
-		return 0;
-	}
+	return secretCode;
 }
 
-void Code::SetSecretCodeAtIndex(int index, int value)
+void Code::SetSecretCode(std::vector<int> newCode)
 {
-	secretCode[index] = value;
+	secretCode = newCode;
 }
 
 int Code::CheckIncorrect(Code &guess)
 {
 	int NumIncorrect = 0;
+	std::vector<int> temp = guess.GetSecretCode();
 	for (int i = 0; i <= 3; i++)
 	{
 		for (int j = 0; i <= 3; j++)
 		{
-			if (secretCode[i] == guess.GetSecretCodeAtIndex(j))
+			if (secretCode[i] == temp[j] && i != j)
 			{
 				NumIncorrect++;
-				guess.SetSecretCodeAtIndex(j, -1);
+				//sets to invalid to not be counted again
+				temp[j] = INVALID_CODE;
 			}
 		}
 	}
@@ -61,7 +57,7 @@ int Code::CheckCorrect(const Code &guess)const
 	int NumCorrect = 0;
 	for (int i = 0; i < 3; i++)
 	{
-		if (secretCode[i] == guess.GetSecretCodeAtIndex[i])
+		if (secretCode[i] == guess.GetSecretCode()[i])
 		{
 			NumCorrect++;
 		}

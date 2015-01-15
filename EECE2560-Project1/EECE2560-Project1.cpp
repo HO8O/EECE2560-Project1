@@ -2,10 +2,13 @@
 //
 
 #include "stdafx.h"
+#include "Mastermind.h"
 
 
 int _tmain(int argc, _TCHAR* argv[])
 {
+	Mastermind myGame = Mastermind();
+	myGame.PlayGame();
 	return 0;
 }
 

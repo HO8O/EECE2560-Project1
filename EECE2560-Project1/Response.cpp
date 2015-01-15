@@ -52,7 +52,7 @@ bool Response::IsCorrect()const
 }
 
 
-void Response::PrintStoredCode()
+void Response::PrintStoredResponse()
 {
 	std::cout << correct;
 	std::cout << " ";

@@ -1,15 +1,20 @@
 #pragma once
+#include <vector>
+
+//defined so there are no magic numbers in code
+#define INVALID_CODE -1
+
 class Code
 {
 public:
 	Code();
 	~Code();
 private:
-	int secretCode[4];
+	std::vector<int> secretCode;
 public:
 	int CheckIncorrect(Code &guess);
 	int CheckCorrect(const Code &guess)const;
-	int GetSecretCodeAtIndex(int index)const;
-	void SetSecretCodeAtIndex(int index, int value);
+	std::vector<int> GetSecretCode()const;
+	void SetSecretCode(std::vector<int> newCode);
 };
 

@@ -13,7 +13,7 @@ public:
 	int GetCorrect()const;
 	int GetIncorrect()const;
 	bool IsCorrect()const;
-	void PrintStoredCode();
+	void PrintStoredResponse();
 	bool CompareResponse(const Response &response)const;
 };
 

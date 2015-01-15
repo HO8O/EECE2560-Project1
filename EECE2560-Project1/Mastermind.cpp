@@ -6,6 +6,7 @@
 
 Mastermind::Mastermind()
 {
+	mySecretCode = Code();
 }
 
 
@@ -16,6 +17,8 @@ Mastermind::~Mastermind()
 
 void Mastermind::PrintSecretCode()
 {
+	printf("%d %d %d %d", mySecretCode.GetSecretCode()[0], mySecretCode.GetSecretCode()[1], 
+		mySecretCode.GetSecretCode()[2], mySecretCode.GetSecretCode()[3]);
 }
 
 
@@ -33,4 +36,9 @@ Response Mastermind::GetResponse(const Code &secret, const Code &guess)const
 
 void Mastermind::PlayGame()
 {
+	for (int i = 0; i < 10; i++)
+	{
+
+	}
+	printf("Failed");
 }
