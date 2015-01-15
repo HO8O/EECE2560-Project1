@@ -87,7 +87,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Code.cpp" />
-    <ClCompile Include="EECE2560-Project1.cpp" />
+    <ClCompile Include="main.cpp" />
     <ClCompile Include="Mastermind.cpp" />
     <ClCompile Include="Response.cpp" />
     <ClCompile Include="stdafx.cpp">
