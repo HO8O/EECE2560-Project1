@@ -8,7 +8,7 @@ Code::Code()
 	secretCode.resize(4);
 	for (int i = 0; i <= 3; i++)
 	{
-		secretCode[i] = ((std::rand() % 6) - 1);
+		secretCode[i] = (std::rand() % 6);
 	}
 }
 
