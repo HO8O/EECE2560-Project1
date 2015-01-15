@@ -1,8 +1,18 @@
+/*
+ *	File : Code.cpp
+ *	Description : Memember function implementation for the Code class
+ *	Written By : Derek Richardson
+*/
 #include "stdafx.h"
 #include "Code.h"
 #include <time.h>
 
-
+/*
+ *	Function : Code()
+ *	Summary : Initializes a new Code with random values
+ *	Params : void
+ *	Returns : N/A
+*/
 Code::Code()
 {
 	std::srand(time(NULL));
@@ -13,7 +23,12 @@ Code::Code()
 	}
 }
 
-
+/*
+ *	Function : ~Code()
+ *	Summary : Deinitializes a Code with INVALID_CODE as each value
+ *	Params : void
+ *	Returns : N/A
+*/
 Code::~Code()
 {
 	for (int i = 0; i <= 3; i++)
@@ -22,16 +37,34 @@ Code::~Code()
 	}
 }
 
+/*
+ *	Function : Code::GetSecretCode()
+ *	Summary : Returns the secret code
+ *	Params : void
+ *	Returns : the stored secret code
+*/
 std::vector<int> Code::GetSecretCode()const
 {
 	return secretCode;
 }
 
+/*
+ *	Function : Code::SetSecretCode()
+ *	Summary : Sets the secret code
+ *	Params : vector<int> newCode - new code to be stored
+ *	Returns : the stored secret code
+*/
 void Code::SetSecretCode(std::vector<int> newCode)
 {
 	secretCode = newCode;
 }
 
+/*
+ *	Function : Code::Checkincorrect()
+ *	Summary : Returns the number of values that are in secret code but in wrong place
+ *	Params : Code &guess - the code to compare to secret code
+ *	Returns : the number of incorrect values
+*/
 int Code::CheckIncorrect(const Code &guess)const
 {
 	int NumIncorrect = 0;
@@ -58,7 +91,12 @@ int Code::CheckIncorrect(const Code &guess)const
 	return NumIncorrect;
 }
 
-
+/*
+ *	Function : Code::CheckCorrect()
+ *	Summary : Returns the number of values that are in secret code and in correct place
+ *	Params : Code &guess - the code to compare to secret code
+ *	Returns : the number of correct values
+*/
 int Code::CheckCorrect(const Code &guess)const
 {
 	int NumCorrect = 0;

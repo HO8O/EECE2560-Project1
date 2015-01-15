@@ -1,3 +1,9 @@
+/*
+ *	File : Code.h
+ *	Description : Class declaration for the Code class
+ *	Written By : Derek Richardson
+*/
+
 #pragma once
 #include <vector>
 
