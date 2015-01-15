@@ -1,4 +1,5 @@
 #include "stdafx.h"
+#include <iostream>
 #include "Response.h"
 
 
@@ -40,16 +41,33 @@ int Response::GetIncorrect()const
 
 bool Response::IsCorrect()const
 {
-	return false;
+	if (correct == 4)
+	{
+		return true;
+	}
+	else
+	{
+		return false;
+	}
 }
 
 
 void Response::PrintStoredCode()
 {
+	std::cout << correct;
+	std::cout << " ";
+	std::cout << incorrect;
 }
 
 
 bool Response::CompareResponse(const Response &response)const
 {
-	return false;
+	if (correct == response.GetCorrect() && incorrect == response.GetIncorrect())
+	{
+		return true;
+	}
+	else
+	{
+		return false;
+	}
 }
