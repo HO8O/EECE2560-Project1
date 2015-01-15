@@ -3,10 +3,13 @@
 #include "Response.h"
 #include "Mastermind.h"
 
+#include <iostream>
+
 
 Mastermind::Mastermind()
 {
 	mySecretCode = Code();
+	currentResponse = Response();
 }
 
 
@@ -17,28 +20,64 @@ Mastermind::~Mastermind()
 
 void Mastermind::PrintSecretCode()
 {
-	printf("%d %d %d %d", mySecretCode.GetSecretCode()[0], mySecretCode.GetSecretCode()[1], 
+	printf("\n%d %d %d %d", mySecretCode.GetSecretCode()[0], mySecretCode.GetSecretCode()[1], 
 		mySecretCode.GetSecretCode()[2], mySecretCode.GetSecretCode()[3]);
 }
 
 
 Code Mastermind::HumanGuess()const
 {
-	return Code();
+	Code guess = Code();
+	std::vector<int> codeGuess;
+	codeGuess.resize(4);
+	int tempInt = INVALID_CODE;
+	int current = 0;
+	while (current != 4)
+	{
+		std::cout << "\nEnter code value " << current << ":";
+		std::cin >> tempInt;
+		if (tempInt <= 5 && tempInt >= 0)
+		{
+			codeGuess[current] = tempInt;
+			current++;
+		}
+		else
+		{
+			std::cout << "\nError: Value must be in rang [0,5]!!!";
+		}
+	}
+	guess.SetSecretCode(codeGuess);
+	return guess;
 }
 
 
-Response Mastermind::GetResponse(const Code &secret, const Code &guess)const
+Response Mastermind::GetResponse(const Code &guess)const
 {
-	return Response();
+	Response myResponse = Response();
+	myResponse.SetCorrect(mySecretCode.CheckCorrect(guess));
+	myResponse.SetIncorrect(mySecretCode.CheckIncorrect(guess));
+	return myResponse;
 }
 
 
 void Mastermind::PlayGame()
 {
-	for (int i = 0; i < 10; i++)
-	{
+	mySecretCode = Code();
+	PrintSecretCode();
+	int turnNum = 1;
+	bool hasWon = false;
 
+	while (turnNum < 11 && hasWon == false)
+	{
+		std::cout << "\nGuess: " << turnNum;
+		currentResponse = GetResponse(HumanGuess());
+		currentResponse.PrintStoredResponse();
+		hasWon = currentResponse.IsCorrect();
+		turnNum++;
 	}
-	printf("Failed");
+
+	if (hasWon)
+		std::cout << "\nYou Win!!!";
+	else
+		std::cout << "\nYou lose.";
 }

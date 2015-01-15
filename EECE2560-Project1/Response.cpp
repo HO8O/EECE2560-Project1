@@ -54,9 +54,7 @@ bool Response::IsCorrect()const
 
 void Response::PrintStoredResponse()
 {
-	std::cout << correct;
-	std::cout << " ";
-	std::cout << incorrect;
+	std::cout << "\n" << correct << " " << incorrect;
 }
 
 

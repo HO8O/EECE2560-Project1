@@ -9,10 +9,11 @@ public:
 	~Mastermind();
 private:
 	Code mySecretCode;
+	Response currentResponse;
 public:
 	void PrintSecretCode();
 	Code HumanGuess()const;
-	Response GetResponse(const Code &secret, const Code &guess)const;
+	Response GetResponse(const Code &guess)const;
 	void PlayGame();
 };
 

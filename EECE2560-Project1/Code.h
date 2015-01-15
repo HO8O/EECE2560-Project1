@@ -12,7 +12,7 @@ public:
 private:
 	std::vector<int> secretCode;
 public:
-	int CheckIncorrect(Code &guess);
+	int CheckIncorrect(const Code &guess)const;
 	int CheckCorrect(const Code &guess)const;
 	std::vector<int> GetSecretCode()const;
 	void SetSecretCode(std::vector<int> newCode);
