@@ -5,25 +5,45 @@
 
 #include <iostream>
 
-
+/*
+*	Function : Mastermind()
+*	Summary : Initializes a new Mastermind and initializes the datavalue currentResponse 
+*	Params : void
+*	Returns : N/A
+*/
 Mastermind::Mastermind()
 {
 	currentResponse = Response();
 }
 
-
+/*
+*	Function : ~Mastermind()
+*	Summary : Deconstructs Mastermind
+*	Params : void
+*	Returns : N/A
+*/
 Mastermind::~Mastermind()
 {
 }
 
-
+/*
+*	Function : PrintSecretCode()
+*	Summary : Prints out the secret code
+*	Params : void
+*	Returns : N/A
+*/
 void Mastermind::PrintSecretCode()
 {
 	printf("\n%d %d %d %d", mySecretCode.GetSecretCode()[0], mySecretCode.GetSecretCode()[1], 
 		mySecretCode.GetSecretCode()[2], mySecretCode.GetSecretCode()[3]);
 }
 
-
+/*
+*	Function : HumanGuess()
+*	Summary : Takes in a four digit input from the user.
+*	Params : void
+*	Returns : a guess from the user
+*/
 Code Mastermind::HumanGuess()const
 {
 	Code guess = Code();
@@ -51,7 +71,12 @@ Code Mastermind::HumanGuess()const
 	return guess;
 }
 
-
+/*
+*	Function : GetResponse()
+*	Summary : Creates a response using an input guess
+*	Params : a guess from the user
+*	Returns : a response created from the guess input
+*/
 Response Mastermind::GetResponse(const Code &guess)const
 {
 	Response myResponse = Response();
@@ -60,7 +85,12 @@ Response Mastermind::GetResponse(const Code &guess)const
 	return myResponse;
 }
 
-
+/*
+*	Function : playGame()
+*	Summary : Creates a new secret code and runs through one game of Mastermind
+*	Params : void
+*	Returns : N/A
+*/
 void Mastermind::PlayGame()
 {
 	mySecretCode = Code();
