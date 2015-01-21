@@ -1,0 +1,17 @@
+﻿Build started 1/20/2015 10:29:48 PM.
+     1>Project "C:\Users\Derek\Desktop\Semester 5\Fundementals of Algorithms\ricwis-1a\ricwis-1a\ricwis-1a.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\ricwis-1a.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt "ricwis-1a.cpp"
+         ricwis-1a.cpp
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Derek\Desktop\Semester 5\Fundementals of Algorithms\ricwis-1a\Debug\ricwis-1a.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Derek\Desktop\Semester 5\Fundementals of Algorithms\ricwis-1a\Debug\ricwis-1a.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Derek\Desktop\Semester 5\Fundementals of Algorithms\ricwis-1a\Debug\ricwis-1a.lib" /MACHINE:X86 Debug\Code.obj
+         Debug\Mastermind.obj
+         Debug\Response.obj
+         "Debug\ricwis-1a.obj"
+         Debug\stdafx.obj
+         ricwis-1a.vcxproj -> C:\Users\Derek\Desktop\Semester 5\Fundementals of Algorithms\ricwis-1a\Debug\ricwis-1a.exe
+     1>Done Building Project "C:\Users\Derek\Desktop\Semester 5\Fundementals of Algorithms\ricwis-1a\ricwis-1a\ricwis-1a.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:03.55
