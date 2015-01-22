@@ -116,3 +116,21 @@ bool Response::CompareResponse(const Response &response)const
 		return false;
 	}
 }
+
+std::ostream &operator<<(std::ostream &ostr, const Response r)
+{
+	ostr << "Correct : " << r.GetCorrect() << " Incorect : " << r.GetIncorrect();
+	return ostr;
+}
+
+Response Response::operator=(const Response r)
+{
+	correct = r.GetCorrect();
+	incorrect = r.GetIncorrect();
+	return *this;
+}
+
+bool operator==(const Response &r1, const Response &r2)
+{
+	return ((r1.GetCorrect() == r2.GetCorrect()) && (r1.GetIncorrect() == r2.GetIncorrect()));
+}
