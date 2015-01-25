@@ -22,5 +22,7 @@ public:
 	int CheckCorrect(const Code &guess)const;
 	std::vector<int> GetSecretCode()const;
 	void SetSecretCode(std::vector<int> newCode);
+	void Increment();
 };
 
+std::ostream &operator<<(std::ostream &ostr, const Code &c);

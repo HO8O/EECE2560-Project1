@@ -117,7 +117,7 @@ bool Response::CompareResponse(const Response &response)const
 	}
 }
 
-std::ostream &operator<<(std::ostream &ostr, const Response r)
+std::ostream &operator<<(std::ostream &ostr, const Response &r)
 {
 	ostr << "Correct : " << r.GetCorrect() << " Incorect : " << r.GetIncorrect();
 	return ostr;

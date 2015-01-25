@@ -6,6 +6,7 @@
 #include "stdafx.h"
 #include "Code.h"
 #include <time.h>
+#include <iostream>
 
 /*
  *	Function : Code()
@@ -108,4 +109,36 @@ int Code::CheckCorrect(const Code &guess)const
 		}
 	}
 	return NumCorrect;
+}
+
+std::ostream &operator<<(std::ostream &ostr, const Code &c)
+{
+	ostr << c.GetSecretCode()[0] << c.GetSecretCode()[1] << c.GetSecretCode()[2] << c.GetSecretCode()[3];
+	return ostr;
+}
+
+void Code::Increment()
+{
+	bool carry = false;
+	int index = 3;
+	while(!carry)
+	{
+		if(index >= 0)
+		{
+			if(secretCode[index] == 5)
+			{
+				carry = true;
+				secretCode[index] = 0;
+			}
+			else
+			{
+				secretCode[index]++;
+			}
+			index--;
+		}
+		else
+		{
+			return;
+		}
+	}
 }

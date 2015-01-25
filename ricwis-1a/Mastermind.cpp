@@ -94,7 +94,7 @@ Response Mastermind::GetResponse(const Code &guess)const
 void Mastermind::PlayGame()
 {
 	mySecretCode = Code();
-	PrintSecretCode();
+	//PrintSecretCode();
 	int turnNum = 1;
 	bool hasWon = false;
 
@@ -111,4 +111,10 @@ void Mastermind::PlayGame()
 		std::cout << "\nYou Win!!!";
 	else
 		std::cout << "\nYou lose.";
+}
+
+std::ostream &operator<<(std::ostream &ostr, const Mastermind &m)
+{
+	ostr << m.mySecretCode;
+	return ostr;
 }

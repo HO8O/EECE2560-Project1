@@ -79,6 +79,7 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Agent.h" />
     <ClInclude Include="Code.h" />
     <ClInclude Include="Mastermind.h" />
     <ClInclude Include="Response.h" />
@@ -86,6 +87,7 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Agent.cpp" />
     <ClCompile Include="Code.cpp" />
     <ClCompile Include="Mastermind.cpp" />
     <ClCompile Include="Response.cpp" />
