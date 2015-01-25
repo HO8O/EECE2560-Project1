@@ -1,23 +1,21 @@
-﻿Build started 1/22/2015 3:53:04 PM.
+﻿Build started 1/25/2015 1:26:15 PM.
      1>Project "C:\Users\Derek\Desktop\Semester 5\Fundementals of Algorithms\ricwis-1b\ricwis-1a\ricwis-1a.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\ricwis-1a.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Agent.cpp Code.cpp Mastermind.cpp "ricwis-1a.cpp"
-         Mastermind.cpp
-         Generating Code...
-         Skipping... (no relevant changes detected)
-         ricwis-1a.cpp
-         Code.cpp
          Agent.cpp
-       Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Derek\Desktop\Semester 5\Fundementals of Algorithms\ricwis-1b\Debug\ricwis-1a.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Derek\Desktop\Semester 5\Fundementals of Algorithms\ricwis-1b\Debug\ricwis-1a.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Derek\Desktop\Semester 5\Fundementals of Algorithms\ricwis-1b\Debug\ricwis-1a.lib" /MACHINE:X86 Debug\Agent.obj
-         Debug\Code.obj
-         Debug\Mastermind.obj
-         Debug\Response.obj
-         "Debug\ricwis-1a.obj"
-         Debug\stdafx.obj
-         ricwis-1a.vcxproj -> C:\Users\Derek\Desktop\Semester 5\Fundementals of Algorithms\ricwis-1b\Debug\ricwis-1a.exe
-     1>Done Building Project "C:\Users\Derek\Desktop\Semester 5\Fundementals of Algorithms\ricwis-1b\ricwis-1a\ricwis-1a.vcxproj" (Build target(s)).
+         Generating Code...
+     1>c:\users\derek\desktop\semester 5\fundementals of algorithms\ricwis-1b\ricwis-1a\agent.cpp(30): error C4716: 'ComputeScore' : must return a value
+     1>cl : Command line warning D9028: minimal rebuild failure, reverting to normal build
+         Compiling...
+         Code.cpp
+     1>c:\users\derek\desktop\semester 5\fundementals of algorithms\ricwis-1b\ricwis-1a\code.cpp(6): fatal error C1041: cannot open program database 'c:\users\derek\desktop\semester 5\fundementals of algorithms\ricwis-1b\ricwis-1a\debug\vc120.idb'; if multiple CL.EXE write to the same .PDB file, please use /FS
+         Mastermind.cpp
+     1>c:\users\derek\desktop\semester 5\fundementals of algorithms\ricwis-1b\ricwis-1a\mastermind.cpp(1): fatal error C1041: cannot open program database 'c:\users\derek\desktop\semester 5\fundementals of algorithms\ricwis-1b\ricwis-1a\debug\vc120.idb'; if multiple CL.EXE write to the same .PDB file, please use /FS
+         ricwis-1a.cpp
+     1>c:\users\derek\desktop\semester 5\fundementals of algorithms\ricwis-1b\ricwis-1a\ricwis-1a.cpp(5): fatal error C1041: cannot open program database 'c:\users\derek\desktop\semester 5\fundementals of algorithms\ricwis-1b\ricwis-1a\debug\vc120.idb'; if multiple CL.EXE write to the same .PDB file, please use /FS
+         Generating Code...
+     1>Done Building Project "C:\Users\Derek\Desktop\Semester 5\Fundementals of Algorithms\ricwis-1b\ricwis-1a\ricwis-1a.vcxproj" (Build target(s)) -- FAILED.
 
-Build succeeded.
+Build FAILED.
 
-Time Elapsed 00:00:03.17
+Time Elapsed 00:00:03.36

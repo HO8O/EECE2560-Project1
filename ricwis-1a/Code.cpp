@@ -117,6 +117,11 @@ std::ostream &operator<<(std::ostream &ostr, const Code &c)
 	return ostr;
 }
 
+bool operator==(const Code &c1, const Code &c2)
+{
+	return ((c1.GetSecretCode() == c2.GetSecretCode()));
+}
+
 void Code::Increment()
 {
 	bool carry = false;

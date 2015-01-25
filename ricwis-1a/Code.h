@@ -24,5 +24,5 @@ public:
 	void SetSecretCode(std::vector<int> newCode);
 	void Increment();
 };
-
+bool operator==(const Code &c1, const Code &c2);
 std::ostream &operator<<(std::ostream &ostr, const Code &c);

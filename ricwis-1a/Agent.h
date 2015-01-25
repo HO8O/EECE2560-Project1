@@ -9,6 +9,12 @@ struct Guess
 	Response response;
 };
 
+struct PotentialGuess
+{
+	Code code;
+	double score;
+};
+
 class Agent
 {
 private:
@@ -17,5 +23,5 @@ public:
 	Agent();
 	~Agent();
 	Code AgentGuess();
-	bool consistentWithPreviousGuesses(const Code &guess)const;
+	bool consistentWithAllPreviousGuesses(const Code &guess)const;
 };
