@@ -14,6 +14,7 @@ class Code
 {
 public:
 	Code();
+	Code(std::vector<int> code);
 	~Code();
 private:
 	std::vector<int> secretCode;

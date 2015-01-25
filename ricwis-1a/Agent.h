@@ -19,9 +19,11 @@ class Agent
 {
 private:
 	std::vector < Guess >  myGuessList;
+	std::vector < Code > consistentCodes;
 public:
 	Agent();
 	~Agent();
 	Code AgentGuess();
+	void Agent::UpdateConsistantCodes();
 	bool consistentWithAllPreviousGuesses(const Code &guess)const;
 };

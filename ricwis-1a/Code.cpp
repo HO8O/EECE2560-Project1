@@ -24,6 +24,10 @@ Code::Code()
 	}
 }
 
+Code::Code(std::vector<int> code)
+{
+	secretCode = code;
+}
 /*
  *	Function : ~Code()
  *	Summary : Deinitializes a Code with INVALID_CODE as each value

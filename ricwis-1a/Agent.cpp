@@ -21,12 +21,27 @@ bool Agent::consistentWithAllPreviousGuesses(const Code &guess)const
 			return false;
 		}
 	}
-	return false;
+	return true;
 }
 
 double ComputeScore(const Code &guess)
 {
+	return 0;
+}
 
+void Agent::UpdateConsistantCodes()
+{
+	consistentCodes.clear();
+	Code temp = Code(std::vector < int > {0, 0, 0, 0});
+
+	for (int i = 0; i < 1554; i++)
+	{
+		if (consistentWithAllPreviousGuesses(temp))
+		{
+			consistentCodes.push_back(temp);
+		}
+		temp.Increment();
+	}
 }
 
 Code Agent::AgentGuess()
