@@ -130,7 +130,7 @@ void Code::Increment()
 {
 	bool carry = false;
 	int index = 3;
-	while(!carry)
+	do
 	{
 		if(index >= 0)
 		{
@@ -142,6 +142,7 @@ void Code::Increment()
 			else
 			{
 				secretCode[index]++;
+				return;
 			}
 			index--;
 		}
@@ -149,5 +150,5 @@ void Code::Increment()
 		{
 			return;
 		}
-	}
+	} while(carry);
 }
