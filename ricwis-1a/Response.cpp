@@ -130,6 +130,21 @@ Response Response::operator=(const Response r)
 	return *this;
 }
 
+void Increment()
+{
+    if ((correct + incorrect) < 4){
+        incorrect++;
+    }
+    else if (correct != 4){
+        correct++;
+        incorrect = 0;
+    }
+    else {
+        correct = 0;
+        incorrect = 0;
+    }
+}
+
 bool operator==(const Response &r1, const Response &r2)
 {
 	return ((r1.GetCorrect() == r2.GetCorrect()) && (r1.GetIncorrect() == r2.GetIncorrect()));
