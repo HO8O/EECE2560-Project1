@@ -27,5 +27,5 @@ public:
 	void UpdateConsistantCodes();
 	double ComputeScore(const Code &guess);
 	bool consistentWithAllPreviousGuesses(const Code &guess)const;
-	void Agent::GiveResponse(const Response newResponse);
+	void GiveResponse(const Response newResponse);
 };

@@ -19,7 +19,6 @@ public:
 	bool IsCorrect()const;
 	void PrintStoredResponse();
 	bool CompareResponse(const Response &response)const;
-	void Increment();
 	Response operator=(const Response r);
 };
 
