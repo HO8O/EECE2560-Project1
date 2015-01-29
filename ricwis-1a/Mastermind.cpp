@@ -7,7 +7,7 @@
 
 /*
 *	Function : Mastermind()
-*	Summary : Initializes a new Mastermind and initializes the datavalue currentResponse 
+*	Summary : Initializes a new Mastermind and initializes the datavalue currentResponse
 *	Params : void
 *	Returns : N/A
 */
@@ -34,7 +34,7 @@ Mastermind::~Mastermind()
 */
 void Mastermind::PrintSecretCode()
 {
-	printf("\n%d %d %d %d", mySecretCode.GetSecretCode()[0], mySecretCode.GetSecretCode()[1], 
+	printf("\n%d %d %d %d", mySecretCode.GetSecretCode()[0], mySecretCode.GetSecretCode()[1],
 		mySecretCode.GetSecretCode()[2], mySecretCode.GetSecretCode()[3]);
 }
 
@@ -111,6 +111,25 @@ void Mastermind::PlayGame()
 		std::cout << "\nYou Win!!!";
 	else
 		std::cout << "\nYou lose.";
+}
+
+
+void Mastermind::PlayGame2()
+{
+    mySecretCode = HumanGuess();
+    std::cout << mySecretCode;
+    Agent a = Agent();
+    bool hasWon = false;
+    int turnNum = 1;
+    while(!hasWon && turnNum < 11)
+    {
+        std::cout << "\nGuess: " << turnNum;
+		currentResponse = GetResponse(AgentGuess());
+		currentResponse.PrintStoredResponse();
+		a.GiveResponse(currentResponse);
+		hasWon = currentResponse.IsCorrect();
+		turnNum++;
+    }
 }
 
 std::ostream &operator<<(std::ostream &ostr, const Mastermind &m)

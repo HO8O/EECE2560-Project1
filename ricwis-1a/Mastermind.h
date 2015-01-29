@@ -15,5 +15,6 @@ public:
 	Code HumanGuess()const;
 	Response GetResponse(const Code &guess)const;
 	void PlayGame();
+	void PlayGame2();
 	friend std::ostream &operator<<(std::ostream &ostr, const Mastermind &m);
 };
