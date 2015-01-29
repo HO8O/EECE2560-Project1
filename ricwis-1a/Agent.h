@@ -24,6 +24,8 @@ public:
 	Agent();
 	~Agent();
 	Code AgentGuess();
-	void Agent::UpdateConsistantCodes();
+	void UpdateConsistantCodes();
+	double ComputeScore(const Code &guess);
 	bool consistentWithAllPreviousGuesses(const Code &guess)const;
+	void Agent::GiveResponse(const Response newResponse);
 };

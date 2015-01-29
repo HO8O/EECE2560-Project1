@@ -14,6 +14,12 @@ Response::Response()
 	incorrect = 0;
 }
 
+Response::Response(int cor, int incor)
+{
+	correct = cor;
+	incorrect = incor;
+}
+
 /*
 *	Function : ~Response()
 *	Summary : Deconstructs Response
@@ -130,7 +136,7 @@ Response Response::operator=(const Response r)
 	return *this;
 }
 
-void Increment()
+void Response::Increment()
 {
     if ((correct + incorrect) < 4){
         incorrect++;

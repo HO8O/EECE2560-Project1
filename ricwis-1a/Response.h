@@ -5,12 +5,14 @@ class Response
 {
 public:
 	Response();
+	Response(int cor, int incor);
 	~Response();
 private:
 	int correct;
 	int incorrect;
 public:
 	void SetCorrect(int numOfCorect);
+	void Increment();
 	void SetIncorrect(int numOfIncorrect);
 	int GetCorrect()const;
 	int GetIncorrect()const;
