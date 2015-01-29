@@ -81,16 +81,16 @@ Code Agent::AgentGuess()
 	};
 
 	newPotentialGuess.code.Increment();
-	newPotentialGuess.score = ComputeScore(newGuess.code);
+	newPotentialGuess.score = ComputeScore(newPotentialGuess.code);
 
-	PotentialGuess temp = newGuess;
+	PotentialGuess temp = newPotentialGuess;
 
 	while (temp.code.GetSecretCode() != std::vector<int>{0,0,0,0})//Not sure how to stop this loop
 	{
 		if (consistentWithAllPreviousGuesses(temp.code))
 		{
 			temp.score = ComputeScore(temp.code);
-			if (temp.score < newGuess.score)
+			if (temp.score < newPotentialGuess.score)
 			{
 				newPotentialGuess = temp;
 			}
@@ -104,6 +104,7 @@ Code Agent::AgentGuess()
 		Response()
 	};
 	myGuessList.push_back(newGuess);
+	std::cout << newGuess.code;
 	return newGuess.code;
 }
 
