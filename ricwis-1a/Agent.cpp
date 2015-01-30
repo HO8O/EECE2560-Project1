@@ -1,16 +1,34 @@
 #include "stdafx.h"
 #include "Agent.h"
 
-
+/*
+*	Function : Agent()
+*	Summary : Constructs the Agent object
+*	Params : N/A
+*	Returns : void
+*/
 Agent::Agent()
 {
 }
 
 
+/*
+*	Function : ~Agent()
+*	Summary : Deconstructs the Agent object
+*	Params : N/A
+*	Returns : void
+*/
 Agent::~Agent()
 {
 }
 
+
+/*
+*	Function : consistentWithAllPreviousGuesses()
+*	Summary : Checks whether the new guess is consistent with each of the previous guesses
+*	Params : the Code object guess
+*	Returns : a bool on whether the guess is consistent
+*/
 bool Agent::consistentWithAllPreviousGuesses(const Code &guess)const
 {
 	for each(Guess p in myGuessList)
@@ -25,7 +43,12 @@ bool Agent::consistentWithAllPreviousGuesses(const Code &guess)const
 }
 
 
-
+/*
+*	Function : ComputerScore()
+*	Summary : Assigns a score to a guess
+*	Params : A Code object guess
+*	Returns : a double that is the score for the guess
+*/
 double Agent::ComputeScore(const Code &guess)
 {
 	Guess temp = { guess, Response(0, 0) };
@@ -57,6 +80,13 @@ double Agent::ComputeScore(const Code &guess)
 	return score;
 }
 
+
+/*
+*	Function : UpdateConsistentCodes
+*	Summary : Clears the consistentCodes vector and updates it with new codes that are checked with the consistentWithAllPreviousGuesses function
+*	Params : N/A
+*	Returns : void
+*/
 void Agent::UpdateConsistantCodes()
 {
 	consistentCodes.clear();
@@ -72,6 +102,13 @@ void Agent::UpdateConsistantCodes()
 	}
 }
 
+
+/*
+*	Function : AgentGuess
+*	Summary : Runs the agent through the process of making its next guess
+*	Params : N/A
+*	Returns : a Code with the Agents guess
+*/
 Code Agent::AgentGuess()
 {
 	if (myGuessList.size() != 0)
@@ -124,6 +161,13 @@ Code Agent::AgentGuess()
 	}
 }
 
+
+/*
+*	Function : GiveResponse()
+*	Summary : adds the new response to myGuessList and runs the UpdateConsistentCodes function
+*	Params : a Response
+*	Returns : void
+*/
 void Agent::GiveResponse(const Response newResponse)
 {
 	myGuessList.back().response = newResponse;

@@ -1,21 +1,9 @@
-﻿Build started 1/25/2015 1:26:15 PM.
-     1>Project "C:\Users\Derek\Desktop\Semester 5\Fundementals of Algorithms\ricwis-1b\ricwis-1a\ricwis-1a.vcxproj" on node 2 (Build target(s)).
-     1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\ricwis-1a.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Agent.cpp Code.cpp Mastermind.cpp "ricwis-1a.cpp"
-         Agent.cpp
-         Generating Code...
-     1>c:\users\derek\desktop\semester 5\fundementals of algorithms\ricwis-1b\ricwis-1a\agent.cpp(30): error C4716: 'ComputeScore' : must return a value
-     1>cl : Command line warning D9028: minimal rebuild failure, reverting to normal build
-         Compiling...
-         Code.cpp
-     1>c:\users\derek\desktop\semester 5\fundementals of algorithms\ricwis-1b\ricwis-1a\code.cpp(6): fatal error C1041: cannot open program database 'c:\users\derek\desktop\semester 5\fundementals of algorithms\ricwis-1b\ricwis-1a\debug\vc120.idb'; if multiple CL.EXE write to the same .PDB file, please use /FS
-         Mastermind.cpp
-     1>c:\users\derek\desktop\semester 5\fundementals of algorithms\ricwis-1b\ricwis-1a\mastermind.cpp(1): fatal error C1041: cannot open program database 'c:\users\derek\desktop\semester 5\fundementals of algorithms\ricwis-1b\ricwis-1a\debug\vc120.idb'; if multiple CL.EXE write to the same .PDB file, please use /FS
-         ricwis-1a.cpp
-     1>c:\users\derek\desktop\semester 5\fundementals of algorithms\ricwis-1b\ricwis-1a\ricwis-1a.cpp(5): fatal error C1041: cannot open program database 'c:\users\derek\desktop\semester 5\fundementals of algorithms\ricwis-1b\ricwis-1a\debug\vc120.idb'; if multiple CL.EXE write to the same .PDB file, please use /FS
-         Generating Code...
-     1>Done Building Project "C:\Users\Derek\Desktop\Semester 5\Fundementals of Algorithms\ricwis-1b\ricwis-1a\ricwis-1a.vcxproj" (Build target(s)) -- FAILED.
+﻿Build started 1/29/2015 7:24:34 PM.
+     1>Project "D:\EECE2560-Project1\trunk\ricwis-1a\ricwis-1a.vcxproj" on node 2 (Build target(s)).
+     1>Link:
+         ricwis-1a.vcxproj -> D:\EECE2560-Project1\trunk\Debug\ricwis-1a.exe
+     1>Done Building Project "D:\EECE2560-Project1\trunk\ricwis-1a\ricwis-1a.vcxproj" (Build target(s)).
 
-Build FAILED.
+Build succeeded.
 
-Time Elapsed 00:00:03.36
+Time Elapsed 00:00:00.03

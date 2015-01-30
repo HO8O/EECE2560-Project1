@@ -123,12 +123,26 @@ bool Response::CompareResponse(const Response &response)const
 	}
 }
 
+
+/*
+*	Function : operator<<()
+*	Summary : Overloads the ostream << operator to print the response correct and incorrect values
+*	Params : ostr and a Response
+*	Returns : ostr
+*/
 std::ostream &operator<<(std::ostream &ostr, const Response &r)
 {
 	ostr << "Correct : " << r.GetCorrect() << " Incorect : " << r.GetIncorrect();
 	return ostr;
 }
 
+
+/*
+*	Function : operator=()
+*	Summary : Overloads the = operation to store the correct and incorrect Respnse values
+*	Params : a Response
+*	Returns : this Response
+*/
 Response Response::operator=(const Response r)
 {
 	correct = r.GetCorrect();
@@ -136,6 +150,13 @@ Response Response::operator=(const Response r)
 	return *this;
 }
 
+
+/*
+*	Function : Increment()
+*	Summary : Increments through the 15 possible responses
+*	Params : N/A
+*	Returns : void
+*/
 void Response::Increment()
 {
     if ((correct + incorrect) < 4){
@@ -151,6 +172,13 @@ void Response::Increment()
     }
 }
 
+
+/*
+*	Function : Operator==()
+*	Summary : Compares the whether two responses are identical
+*	Params : Two Responses
+*	Returns : bool on whether they are identical or not
+*/
 bool operator==(const Response &r1, const Response &r2)
 {
 	return ((r1.GetCorrect() == r2.GetCorrect()) && (r1.GetIncorrect() == r2.GetIncorrect()));

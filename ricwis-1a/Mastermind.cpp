@@ -115,6 +115,12 @@ void Mastermind::PlayGame()
 }
 
 
+/*
+*	Function : PlayGame2()
+*	Summary : Allows the user to create a secret code and calls the Agent class to guess the code
+*	Params : N/A
+*	Returns : void
+*/
 void Mastermind::PlayGame2()
 {
     mySecretCode = HumanGuess();
@@ -133,6 +139,13 @@ void Mastermind::PlayGame2()
     }
 }
 
+
+/*
+*	Function : Operator<<()
+*	Summary : Outputs the secretCode within Mastermind
+*	Params : an ostr and a Mastermind object
+*	Returns : an ostr
+*/
 std::ostream &operator<<(std::ostream &ostr, const Mastermind &m)
 {
 	ostr << m.mySecretCode;

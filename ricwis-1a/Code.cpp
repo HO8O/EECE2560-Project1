@@ -115,17 +115,38 @@ int Code::CheckCorrect(const Code &guess)const
 	return NumCorrect;
 }
 
+
+/*
+*	Function : Operator<<()
+*	Summary : Outputs the 4 digit Code 
+*	Params : N/A
+*	Returns : void
+*/
 std::ostream &operator<<(std::ostream &ostr, const Code &c)
 {
 	ostr << c.GetSecretCode()[0] << c.GetSecretCode()[1] << c.GetSecretCode()[2] << c.GetSecretCode()[3];
 	return ostr;
 }
 
+
+/*
+*	Function : Operator==()
+*	Summary : Compares whether two Codes are equal
+*	Params : Two Code objects
+*	Returns : a bool 
+*/
 bool operator==(const Code &c1, const Code &c2)
 {
 	return ((c1.GetSecretCode() == c2.GetSecretCode()));
 }
 
+
+/*
+*	Function : Increment()
+*	Summary : Increments the Code by 1
+*	Params : N/A
+*	Returns : void
+*/
 void Code::Increment()
 {
 	bool carry = false;
