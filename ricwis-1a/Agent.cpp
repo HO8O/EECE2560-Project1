@@ -38,13 +38,13 @@ double Agent::ComputeScore(const Code &guess)
 	{
 		Code tempCode = Code(std::vector < int > {0, 0, 0, 0});
 		//for all possible codes
-		for (int j = 0; j < 1554; j++)
+		for each (Code code in consistentCodes)
 		{
 			//check how many are consistent
 			for each(Guess guess in tempList)
 			{
-				if (tempCode.CheckCorrect(guess.code) != guess.response.GetCorrect() ||
-					tempCode.CheckIncorrect(guess.code) != guess.response.GetIncorrect())
+				if (code.CheckCorrect(guess.code) != guess.response.GetCorrect() ||
+					code.CheckIncorrect(guess.code) != guess.response.GetIncorrect())
 				{
 					score++;
 				}
@@ -74,41 +74,58 @@ void Agent::UpdateConsistantCodes()
 
 Code Agent::AgentGuess()
 {
-	PotentialGuess newPotentialGuess =
+	if (myGuessList.size() != 0)
 	{
-		Code(std::vector < int > {0, 0, 0, 0}),
-		0
-	};
-
-	newPotentialGuess.code.Increment();
-	newPotentialGuess.score = ComputeScore(newPotentialGuess.code);
-
-	PotentialGuess temp = newPotentialGuess;
-
-	while (temp.code.GetSecretCode() != std::vector<int>{0,0,0,0})//Not sure how to stop this loop
-	{
-		if (consistentWithAllPreviousGuesses(temp.code))
+		PotentialGuess newPotentialGuess =
 		{
-			temp.score = ComputeScore(temp.code);
-			if (temp.score < newPotentialGuess.score)
+			Code(std::vector < int > {0, 0, 0, 0}),
+			1554 * 15
+		};
+
+		newPotentialGuess.code.Increment();
+		newPotentialGuess.score = ComputeScore(newPotentialGuess.code);
+
+		PotentialGuess temp = newPotentialGuess;
+
+		for(int i = 0; i < 1554; i++)//Not sure how to stop this loop
+		{
+			if (consistentWithAllPreviousGuesses(temp.code))
 			{
-				newPotentialGuess = temp;
+				temp.score = ComputeScore(temp.code);
+				if (temp.score < newPotentialGuess.score)
+				{
+					newPotentialGuess = temp;
+				}
 			}
+			//std::cout << i;
+			temp.code.Increment();
 		}
-		temp.code.Increment();
+		//Add this code to guess list
+
+		Guess newGuess = {
+			newPotentialGuess.code,
+			Response()
+		};
+
+		myGuessList.push_back(newGuess);
+		std::cout << "\nAgent Guessed:" << newGuess.code;
+		return newGuess.code;
 	}
-	//Add this code to guess list
-	
-	Guess newGuess = {
-		newPotentialGuess.code,
-		Response()
-	};
-	myGuessList.push_back(newGuess);
-	std::cout << newGuess.code;
-	return newGuess.code;
+	else
+	{
+		Code firstGuess = Code(std::vector<int>{ 0, 0, 0, 0 });
+		Guess newGuess = {
+			firstGuess,
+			Response()
+		};
+		myGuessList.push_back(newGuess);
+		std::cout << "\nAgent Guessed:" << firstGuess;
+		return firstGuess;
+	}
 }
 
 void Agent::GiveResponse(const Response newResponse)
 {
 	myGuessList.back().response = newResponse;
+	UpdateConsistantCodes();
 }

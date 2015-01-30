@@ -14,7 +14,7 @@ int main()
 	Mastermind myGame = Mastermind();
 	while (playOn)
 	{
-		myGame.PlayGame();
+		myGame.PlayGame2();
 		bool validInput = false;
 		char response;
 		std::cout << "\nDo you want to play again? [Y/N] : ";

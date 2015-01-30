@@ -2,6 +2,7 @@
 #include "Code.h"
 #include "Response.h"
 #include "Mastermind.h"
+#include "Agent.h"
 
 #include <iostream>
 
@@ -124,7 +125,7 @@ void Mastermind::PlayGame2()
     while(!hasWon && turnNum < 11)
     {
         std::cout << "\nGuess: " << turnNum;
-		currentResponse = GetResponse(AgentGuess());
+		currentResponse = GetResponse(a.AgentGuess());
 		currentResponse.PrintStoredResponse();
 		a.GiveResponse(currentResponse);
 		hasWon = currentResponse.IsCorrect();
